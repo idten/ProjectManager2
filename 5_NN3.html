@@ -1,0 +1,445 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_002{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_003{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_003{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_004{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:Times,serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:Times,serif;font-size:8.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_006{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: underline}
+div.cls_006{font-family:Times,serif;font-size:9.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:Times,serif;font-size:7.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:Times,serif;font-size:7.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_008{font-family:Times,serif;font-size:6.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:Times,serif;font-size:6.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:Times,serif;font-size:5.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_009{font-family:Times,serif;font-size:5.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_010{font-family:Times,serif;font-size:5.0px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_010{font-family:Times,serif;font-size:5.0px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_011{font-family:Times,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_011{font-family:Times,serif;font-size:11.1px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-309px;top:0px;width:618px;height:796px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:143.04px;top:80.28px" class="cls_002"><span class="cls_002">A NEURAL NETWORK MODEL FOR BANKRUPTCY PREDICTION</span></div>
+<div style="position:absolute;left:268.32px;top:102.36px" class="cls_003"><span class="cls_003">Marcus D. Odom</span></div>
+<div style="position:absolute;left:249.60px;top:113.88px" class="cls_003"><span class="cls_003">Department of Accounting</span></div>
+<div style="position:absolute;left:249.36px;top:124.92px" class="cls_003"><span class="cls_003">Oklahoma State University</span></div>
+<div style="position:absolute;left:244.56px;top:135.96px" class="cls_003"><span class="cls_003">Stillwater, Oklahoma</span></div>
+<div style="position:absolute;left:341.28px;top:135.96px" class="cls_003"><span class="cls_003">74078</span></div>
+<div style="position:absolute;left:272.40px;top:158.28px" class="cls_003"><span class="cls_003">Ramesh Sharda</span></div>
+<div style="position:absolute;left:231.60px;top:169.32px" class="cls_003"><span class="cls_003">College of Business Administration</span></div>
+<div style="position:absolute;left:249.36px;top:180.60px" class="cls_003"><span class="cls_003">Oklahoma State University</span></div>
+<div style="position:absolute;left:244.56px;top:191.40px" class="cls_003"><span class="cls_003">Stillwater, Oklahoma</span></div>
+<div style="position:absolute;left:341.52px;top:191.16px" class="cls_003"><span class="cls_003">74078</span></div>
+<div style="position:absolute;left:227.28px;top:202.20px" class="cls_003"><span class="cls_003">email: MGMTRSH@OSUCC.BITNET</span></div>
+<div style="position:absolute;left:277.92px;top:224.28px" class="cls_002"><span class="cls_002">ABSTRACT</span></div>
+<div style="position:absolute;left:120.72px;top:246.84px" class="cls_004"><span class="cls_004">One interesting area for the use of neural networks is in event prediction.   This study</span></div>
+<div style="position:absolute;left:100.08px;top:257.88px" class="cls_004"><span class="cls_004">develops a neural network model for prediction of bankruptcy and tests it using financial data from</span></div>
+<div style="position:absolute;left:100.08px;top:269.16px" class="cls_004"><span class="cls_004">various companies.   The same set of data is analyzed using a more traditional method of</span></div>
+<div style="position:absolute;left:100.08px;top:280.44px" class="cls_004"><span class="cls_004">bankruptcy prediction, multivariate discriminant analysis.  A comparison of the predictive abilities</span></div>
+<div style="position:absolute;left:100.08px;top:291.72px" class="cls_004"><span class="cls_004">of both the neural network and the discriminant analysis method is presented.  The results show</span></div>
+<div style="position:absolute;left:99.84px;top:303.00px" class="cls_004"><span class="cls_004">that neural networks might be applicable to this problem.</span></div>
+<div style="position:absolute;left:257.52px;top:325.80px" class="cls_002"><span class="cls_002">I. INTRODUCTION</span></div>
+<div style="position:absolute;left:120.48px;top:348.12px" class="cls_004"><span class="cls_004">Neural networks have proven to be good at solving many tasks.  They may have the most</span></div>
+<div style="position:absolute;left:99.84px;top:358.92px" class="cls_004"><span class="cls_004">practical effect in the following three areas: modeling and forecasting, signal processing, and expert</span></div>
+<div style="position:absolute;left:100.08px;top:370.44px" class="cls_004"><span class="cls_004">systems</span></div>
+<div style="position:absolute;left:137.04px;top:370.44px" class="cls_004"><span class="cls_004">[Lippmann,</span></div>
+<div style="position:absolute;left:189.36px;top:369.96px" class="cls_004"><span class="cls_004">1987].   The predictive ability of neural networks falls into the forecasting</span></div>
+<div style="position:absolute;left:100.08px;top:381.48px" class="cls_004"><span class="cls_004">area.  Predictive type problems relate to the auto associative memory of certain neural networks.</span></div>
+<div style="position:absolute;left:99.84px;top:392.28px" class="cls_004"><span class="cls_004">The method used for neural network prediction is called generalization [Dutta and Shekhar, 1989].</span></div>
+<div style="position:absolute;left:99.84px;top:403.80px" class="cls_004"><span class="cls_004">Generalization is different from auto associative memory, in that once the network has been</span></div>
+<div style="position:absolute;left:99.60px;top:414.84px" class="cls_004"><span class="cls_004">trained, new data is input for the network to predict the output.  Previous business applications of</span></div>
+<div style="position:absolute;left:99.60px;top:426.12px" class="cls_004"><span class="cls_004">neural networks include predicting the ratings of corporate bonds</span></div>
+<div style="position:absolute;left:379.20px;top:426.12px" class="cls_004"><span class="cls_004">[Dutta and Shekhar,</span></div>
+<div style="position:absolute;left:467.52px;top:426.12px" class="cls_004"><span class="cls_004">1989], and</span></div>
+<div style="position:absolute;left:99.60px;top:437.40px" class="cls_004"><span class="cls_004">emulating mortgage underwriting judgments [Collins, et. al.,</span></div>
+<div style="position:absolute;left:359.76px;top:437.40px" class="cls_004"><span class="cls_004">1989].</span></div>
+<div style="position:absolute;left:120.24px;top:448.44px" class="cls_004"><span class="cls_004">The purpose of this study is to compare the predictive ability of a neural network and</span></div>
+<div style="position:absolute;left:99.84px;top:459.48px" class="cls_004"><span class="cls_004">multivariate discriminant analysis models in bankruptcy risk prediction. This area has been studied</span></div>
+<div style="position:absolute;left:99.60px;top:470.52px" class="cls_004"><span class="cls_004">extensively in accounting literature.   The first studies were performed to determine whether</span></div>
+<div style="position:absolute;left:99.60px;top:481.80px" class="cls_004"><span class="cls_004">financial ratios provide useful information</span></div>
+<div style="position:absolute;left:280.80px;top:481.80px" class="cls_004"><span class="cls_004">[Beaver,</span></div>
+<div style="position:absolute;left:319.68px;top:481.80px" class="cls_004"><span class="cls_004">1966; Altman,</span></div>
+<div style="position:absolute;left:383.52px;top:481.80px" class="cls_004"><span class="cls_004">1968].  Many different studies</span></div>
+<div style="position:absolute;left:99.60px;top:493.08px" class="cls_004"><span class="cls_004">have used financial ratios for bankruptcy prediction since that first study by Beaver [1966].  The</span></div>
+<div style="position:absolute;left:99.84px;top:504.36px" class="cls_004"><span class="cls_004">majority of these later studies use a discriminant analysis approach instead of the univariate</span></div>
+<div style="position:absolute;left:99.60px;top:515.64px" class="cls_004"><span class="cls_004">approach used by Beaver.  Studies which applied  discriminant analysis include Altman</span></div>
+<div style="position:absolute;left:481.92px;top:515.64px" class="cls_004"><span class="cls_004">[1968],</span></div>
+<div style="position:absolute;left:99.84px;top:526.68px" class="cls_004"><span class="cls_004">Deakin [1972], Blum [1974], Moyer [1977], Altman, et. al. [1977], and Karels and Prakash [1987].</span></div>
+<div style="position:absolute;left:99.60px;top:537.48px" class="cls_004"><span class="cls_004">Discriminant analysis is valid only under certain restrictive assumptions, including the requirement</span></div>
+<div style="position:absolute;left:99.84px;top:548.28px" class="cls_004"><span class="cls_004">for the discriminating variables to be jointly multivariate normal.  This multivariate normality of</span></div>
+<div style="position:absolute;left:99.60px;top:559.32px" class="cls_004"><span class="cls_004">the variables is critical to the discriminant analysis procedure, otherwise, the results obtained may</span></div>
+<div style="position:absolute;left:100.08px;top:570.36px" class="cls_004"><span class="cls_004">be erroneous</span></div>
+<div style="position:absolute;left:159.12px;top:570.36px" class="cls_004"><span class="cls_004">[Karel and Prakash,</span></div>
+<div style="position:absolute;left:248.88px;top:570.60px" class="cls_004"><span class="cls_004">1987].   Neural networks are not subject to the restriction of</span></div>
+<div style="position:absolute;left:99.36px;top:581.40px" class="cls_004"><span class="cls_004">normality.   A comparison of a neural network model and a discriminant analysis model, in</span></div>
+<div style="position:absolute;left:99.84px;top:592.44px" class="cls_004"><span class="cls_004">bankruptcy prediction, is worthwhile in that we will be able to compare a new, more robust</span></div>
+<div style="position:absolute;left:99.84px;top:603.48px" class="cls_004"><span class="cls_004">approach against an established method that makes a priori assumptions about the discriminatory</span></div>
+<div style="position:absolute;left:99.84px;top:614.76px" class="cls_004"><span class="cls_004">variables.</span></div>
+<div style="position:absolute;left:120.48px;top:626.28px" class="cls_004"><span class="cls_004">The importance of failure analysis provides another motivation for this study. Failure analysis</span></div>
+<div style="position:absolute;left:99.60px;top:637.08px" class="cls_004"><span class="cls_004">using financial ratios is very important for several reasons.   First, management can use it to</span></div>
+<div style="position:absolute;left:293.04px;top:705.04px" class="cls_005"><span class="cls_005">II</span></div>
+<div style="position:absolute;left:303.36px;top:704.80px" class="cls_005"><span class="cls_005">- 163</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:806px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:96.96px;top:78.84px" class="cls_004"><span class="cls_004">identify potential problems that need attention</span></div>
+<div style="position:absolute;left:302.40px;top:78.84px" class="cls_004"><span class="cls_004">[Siegel,</span></div>
+<div style="position:absolute;left:339.12px;top:78.60px" class="cls_004"><span class="cls_004">1981].  Second, investors use ratios to</span></div>
+<div style="position:absolute;left:96.72px;top:89.40px" class="cls_004"><span class="cls_004">evaluate a firm.  Last, auditors use it as a tool in going-concern evaluation [Altman,</span></div>
+<div style="position:absolute;left:462.00px;top:89.40px" class="cls_004"><span class="cls_004">1982]. The</span></div>
+<div style="position:absolute;left:96.96px;top:100.44px" class="cls_004"><span class="cls_004">American Accounting Association, in </span><span class="cls_006">A Statement of Basic Accounting Theory,</span><span class="cls_004"> defines accounting</span></div>
+<div style="position:absolute;left:96.96px;top:111.72px" class="cls_004"><span class="cls_004">as "the process of identifying, measuring, and communicating economic information to permit</span></div>
+<div style="position:absolute;left:96.96px;top:122.52px" class="cls_004"><span class="cls_004">informed judgments and decisions by users of the information." [1966, p. 1]  Ratio analysis is just</span></div>
+<div style="position:absolute;left:96.96px;top:133.56px" class="cls_004"><span class="cls_004">one means of using accounting data for this purpose.  This study will see if neural networks are</span></div>
+<div style="position:absolute;left:96.96px;top:144.60px" class="cls_004"><span class="cls_004">better predictors of business performance when these same ratios are presented to them.</span></div>
+<div style="position:absolute;left:117.60px;top:155.40px" class="cls_004"><span class="cls_004">The approach taken in this study is discussed in the next section.  Section 3 is divided into</span></div>
+<div style="position:absolute;left:96.72px;top:166.20px" class="cls_004"><span class="cls_004">two parts a discussion of the discriminant analysis model and a description of training the neural</span></div>
+<div style="position:absolute;left:96.48px;top:177.72px" class="cls_004"><span class="cls_004">network model.   Section</span></div>
+<div style="position:absolute;left:206.40px;top:177.48px" class="cls_004"><span class="cls_004">4 compares the results of the multivariate discriminant analysis model</span></div>
+<div style="position:absolute;left:96.72px;top:188.76px" class="cls_004"><span class="cls_004">with the results of the neural network model.  This is followed by the conclusions of the study</span></div>
+<div style="position:absolute;left:96.96px;top:200.28px" class="cls_004"><span class="cls_004">and some comments on future studies that may be conducted using neural network models.</span></div>
+<div style="position:absolute;left:251.28px;top:222.84px" class="cls_002"><span class="cls_002">II.  METHODOLOGY</span></div>
+<div style="position:absolute;left:117.36px;top:245.64px" class="cls_004"><span class="cls_004">The purpose of this study is to perform analysis on ratios using both discriminant analysis</span></div>
+<div style="position:absolute;left:96.72px;top:256.68px" class="cls_004"><span class="cls_004">and a neural network.   The Altman</span></div>
+<div style="position:absolute;left:260.40px;top:256.20px" class="cls_004"><span class="cls_004">[1968] study is used as the standard for comparison for</span></div>
+<div style="position:absolute;left:96.48px;top:267.48px" class="cls_004"><span class="cls_004">subsequent bankruptcy classification studies using discriminant analysis.  For this reason, we have</span></div>
+<div style="position:absolute;left:96.48px;top:278.52px" class="cls_004"><span class="cls_004">chosen to use the same financial ratios that Altman used in his</span></div>
+<div style="position:absolute;left:370.80px;top:278.52px" class="cls_004"><span class="cls_004">1968 study.  These ratios are:</span></div>
+<div style="position:absolute;left:159.84px;top:300.84px" class="cls_004"><span class="cls_004">X1  Working Capital/Total Assets</span></div>
+<div style="position:absolute;left:159.60px;top:312.12px" class="cls_004"><span class="cls_004">X2  Retained Earnings/Total Assets</span></div>
+<div style="position:absolute;left:159.60px;top:323.16px" class="cls_004"><span class="cls_004">X3  Earnings before Interest and Taxes/Total Assets</span></div>
+<div style="position:absolute;left:159.84px;top:334.44px" class="cls_004"><span class="cls_004">X4  Market Value of Equity/Total Debt</span></div>
+<div style="position:absolute;left:159.84px;top:345.48px" class="cls_004"><span class="cls_004">X5  Sales/Total Assets</span></div>
+<div style="position:absolute;left:117.36px;top:367.56px" class="cls_004"><span class="cls_004">The sample of firms from which the ratios were obtained consisted of firms that went</span></div>
+<div style="position:absolute;left:96.72px;top:378.84px" class="cls_004"><span class="cls_004">bankrupt between</span></div>
+<div style="position:absolute;left:178.56px;top:378.84px" class="cls_004"><span class="cls_004">1975 and</span></div>
+<div style="position:absolute;left:225.36px;top:378.60px" class="cls_004"><span class="cls_004">1982.</span></div>
+<div style="position:absolute;left:258.96px;top:378.36px" class="cls_004"><span class="cls_004">The sample, obtained from </span><span class="cls_006">Moody's Industrial Manuals,</span></div>
+<div style="position:absolute;left:96.48px;top:389.40px" class="cls_004"><span class="cls_004">consisted of a total of 129 firms, 65 of which went bankrupt during the period and 64 nonbankrupt</span></div>
+<div style="position:absolute;left:96.72px;top:400.20px" class="cls_004"><span class="cls_004">firms matched on industry and year.  Two subsamples were developed from this sample of 129</span></div>
+<div style="position:absolute;left:96.72px;top:411.72px" class="cls_004"><span class="cls_004">firms. The first</span></div>
+<div style="position:absolute;left:168.00px;top:411.72px" class="cls_004"><span class="cls_004">(training) subsample of 74 firms data</span></div>
+<div style="position:absolute;left:336.24px;top:411.48px" class="cls_004"><span class="cls_004">(38 bankrupt firms and</span></div>
+<div style="position:absolute;left:441.36px;top:411.48px" class="cls_004"><span class="cls_004">36 nonbankrupt</span></div>
+<div style="position:absolute;left:96.72px;top:422.76px" class="cls_004"><span class="cls_004">firms) was used as the training set for both methods.  The second subsample consisted of 55 firms</span></div>
+<div style="position:absolute;left:96.72px;top:433.80px" class="cls_004"><span class="cls_004">(27 bankrupt firms and 28 nonbankrupt firms) and was used as the holdout sample.  Data used</span></div>
+<div style="position:absolute;left:96.48px;top:445.08px" class="cls_004"><span class="cls_004">for the bankrupt firms is from the last financial statements issued before the firms declared</span></div>
+<div style="position:absolute;left:96.72px;top:456.84px" class="cls_004"><span class="cls_004">bankruptcy.</span></div>
+<div style="position:absolute;left:117.60px;top:467.88px" class="cls_004"><span class="cls_004">Ratios computed from the data for each original  subsample were entered into both a</span></div>
+<div style="position:absolute;left:96.48px;top:479.40px" class="cls_004"><span class="cls_004">conventional discriminant analysis program and a neural network.  The models derived from this</span></div>
+<div style="position:absolute;left:96.72px;top:490.92px" class="cls_004"><span class="cls_004">original subsample were used to predict the classification for both the training subsample and the</span></div>
+<div style="position:absolute;left:96.48px;top:502.44px" class="cls_004"><span class="cls_004">holdout subsample.</span></div>
+<div style="position:absolute;left:183.84px;top:524.76px" class="cls_002"><span class="cls_002">III.  MODELS FOR BANKRUPTCY PREDICTION</span></div>
+<div style="position:absolute;left:96.72px;top:546.60px" class="cls_002"><span class="cls_002">Discriminant Analysis</span></div>
+<div style="position:absolute;left:117.60px;top:569.16px" class="cls_004"><span class="cls_004">The multivariate statistical technique known as discriminant analysis is by far the most widely</span></div>
+<div style="position:absolute;left:96.72px;top:579.96px" class="cls_004"><span class="cls_004">used method for bankruptcy risk analysis.  The program used in this study was SAS DISCRIM</span></div>
+<div style="position:absolute;left:97.20px;top:591.00px" class="cls_004"><span class="cls_004">available on the university mainframe computer.</span></div>
+<div style="position:absolute;left:117.84px;top:602.28px" class="cls_004"><span class="cls_004">The discriminant analysis method correctly classified 33 of the 38 bankrupt firms for a correct</span></div>
+<div style="position:absolute;left:96.96px;top:612.84px" class="cls_004"><span class="cls_004">classification rate of 86.84% when using the training subsample.  The model correctly classified</span></div>
+<div style="position:absolute;left:97.20px;top:624.12px" class="cls_004"><span class="cls_004">all of the nonbankrupt firms  in the training subsample.</span></div>
+<div style="position:absolute;left:364.32px;top:624.12px" class="cls_004"><span class="cls_004">While this  looks promising,  the</span></div>
+<div style="position:absolute;left:96.96px;top:634.68px" class="cls_004"><span class="cls_004">classification results are based on the same data </span><span class="cls_005">that was used in model formulation.  Therefore,</span></div>
+<div style="position:absolute;left:291.84px;top:700.24px" class="cls_005"><span class="cls_005">II - 164</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-310px;top:1608px;width:620px;height:797px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:100.80px;top:75.48px" class="cls_004"><span class="cls_004">caution should be exercised in assessing the validity of the model at this point.</span></div>
+<div style="position:absolute;left:100.80px;top:97.80px" class="cls_002"><span class="cls_002">Neural Network</span></div>
+<div style="position:absolute;left:121.20px;top:119.88px" class="cls_004"><span class="cls_004">The neural network used for training was a three perceptron network consisting of an input</span></div>
+<div style="position:absolute;left:100.80px;top:130.92px" class="cls_004"><span class="cls_004">layer, a hidden layer, and the output layer.  The input layer consisted of the five nodes, one for</span></div>
+<div style="position:absolute;left:100.32px;top:141.72px" class="cls_004"><span class="cls_004">each of the ratios.  The hidden layer consisted of 5 node..;.  The output layer consisted of only one</span></div>
+<div style="position:absolute;left:100.56px;top:153.48px" class="cls_004"><span class="cls_004">neuron with a response of 0, representing bankrupt, and</span></div>
+<div style="position:absolute;left:336.72px;top:153.48px" class="cls_004"><span class="cls_004">1, representing nonbankrupt. The network</span></div>
+<div style="position:absolute;left:100.80px;top:164.04px" class="cls_004"><span class="cls_004">was presented with the ratios for the firms.  The network classified the data on a scale between</span></div>
+<div style="position:absolute;left:100.56px;top:174.84px" class="cls_004"><span class="cls_004">0 and 1.  Firms with output below .5 were classified as bankrupt.  Firms with output greater than</span></div>
+<div style="position:absolute;left:101.04px;top:186.12px" class="cls_004"><span class="cls_004">.5 were classified as nonbankrupt.</span></div>
+<div style="position:absolute;left:288.48px;top:213.72px" class="cls_004"><span class="cls_004">Figure</span></div>
+<div style="position:absolute;left:319.92px;top:213.96px" class="cls_004"><span class="cls_004">1</span></div>
+<div style="position:absolute;left:425.52px;top:264.60px" class="cls_004"><span class="cls_004">> .5 Nonbankrupt</span></div>
+<div style="position:absolute;left:425.52px;top:297.72px" class="cls_004"><span class="cls_004">&lt; .5 Bankrupt</span></div>
+<div style="position:absolute;left:121.20px;top:342.60px" class="cls_004"><span class="cls_004">The neural network was trained by presenting the five ratios for each of the firms in the first</span></div>
+<div style="position:absolute;left:100.80px;top:354.12px" class="cls_004"><span class="cls_004">subsample and the correct output for each to the network.  The learning threshold for the network</span></div>
+<div style="position:absolute;left:100.80px;top:365.16px" class="cls_004"><span class="cls_004">was .075.  The initial learning rate and momentum were .6 and .9, respectively. The learning rate</span></div>
+<div style="position:absolute;left:100.80px;top:376.92px" class="cls_004"><span class="cls_004">and momentum were adjusted downward as suggested by Lippmann</span></div>
+<div style="position:absolute;left:403.44px;top:376.92px" class="cls_004"><span class="cls_004">[1987, p.</span></div>
+<div style="position:absolute;left:447.84px;top:376.92px" class="cls_004"><span class="cls_004">18] to improve</span></div>
+<div style="position:absolute;left:100.56px;top:387.72px" class="cls_004"><span class="cls_004">performance during training.  The learning rate and momentum at the time of convergence were</span></div>
+<div style="position:absolute;left:101.28px;top:399.48px" class="cls_004"><span class="cls_004">.1 and .8 respectively.</span></div>
+<div style="position:absolute;left:121.44px;top:410.52px" class="cls_004"><span class="cls_004">One problem with the backpropagation rule, as explained in Caudill</span></div>
+<div style="position:absolute;left:423.84px;top:410.76px" class="cls_004"><span class="cls_004">[1988, p.</span></div>
+<div style="position:absolute;left:466.80px;top:410.76px" class="cls_004"><span class="cls_004">58], is the</span></div>
+<div style="position:absolute;left:100.32px;top:421.56px" class="cls_004"><span class="cls_004">number of iterations  needed  to  learn  the  data.</span></div>
+<div style="position:absolute;left:329.76px;top:421.56px" class="cls_004"><span class="cls_004">This  criticism held  true  in  this  project.</span></div>
+<div style="position:absolute;left:100.56px;top:432.84px" class="cls_004"><span class="cls_004">Convergence was reached after 191,400 iterations.  All of the training was performed on PC-XT.</span></div>
+<div style="position:absolute;left:100.08px;top:443.88px" class="cls_004"><span class="cls_004">The average time for training was approximately 24 hours.  The software used was Neuroshell,</span></div>
+<div style="position:absolute;left:100.32px;top:454.92px" class="cls_004"><span class="cls_004">release</span></div>
+<div style="position:absolute;left:132.72px;top:454.92px" class="cls_002"><span class="cls_002">1.1, </span><span class="cls_004">a commercial neural network simulator package available for the micro computer from</span></div>
+<div style="position:absolute;left:100.32px;top:465.96px" class="cls_004"><span class="cls_004">Ward System Group, Inc.  This program uses a backpropagation rule neural network.  For more</span></div>
+<div style="position:absolute;left:100.32px;top:477.24px" class="cls_004"><span class="cls_004">in depth description of the backpropagation rule refer to Lippmann</span></div>
+<div style="position:absolute;left:412.80px;top:477.48px" class="cls_004"><span class="cls_004">[1987, pp.</span></div>
+<div style="position:absolute;left:464.88px;top:477.72px" class="cls_004"><span class="cls_004">13-18]  and</span></div>
+<div style="position:absolute;left:100.56px;top:488.76px" class="cls_004"><span class="cls_004">Rummelhart, et. al.</span></div>
+<div style="position:absolute;left:185.76px;top:488.76px" class="cls_004"><span class="cls_004">[1986, pp.</span></div>
+<div style="position:absolute;left:232.56px;top:488.52px" class="cls_004"><span class="cls_004">318-362].</span></div>
+<div style="position:absolute;left:120.96px;top:499.80px" class="cls_004"><span class="cls_004">The neural network correctly predicted all</span></div>
+<div style="position:absolute;left:314.88px;top:500.04px" class="cls_004"><span class="cls_004">36 of the nonbankrupt firms in the training</span></div>
+<div style="position:absolute;left:100.32px;top:511.32px" class="cls_004"><span class="cls_004">subsample as nonbankrupt.  The trained network also correctly predicted all 38 of the bankrupt</span></div>
+<div style="position:absolute;left:100.32px;top:522.36px" class="cls_004"><span class="cls_004">firms as bankrupt.  This was very promising when compared to the discriminant analysis prediction</span></div>
+<div style="position:absolute;left:100.32px;top:533.40px" class="cls_004"><span class="cls_004">rates for the training subsample.</span></div>
+<div style="position:absolute;left:225.60px;top:555.48px" class="cls_002"><span class="cls_002">IV.  COMPARISON OF RESULTS</span></div>
+<div style="position:absolute;left:121.44px;top:577.80px" class="cls_004"><span class="cls_004">The results of the multivariate discriminant analysis method and the neural network are</span></div>
+<div style="position:absolute;left:100.80px;top:588.60px" class="cls_004"><span class="cls_004">presented in Table</span></div>
+<div style="position:absolute;left:181.68px;top:588.84px" class="cls_004"><span class="cls_004">1 for the holdout sample only.  An analysis of the incorrect classifications that</span></div>
+<div style="position:absolute;left:101.04px;top:599.88px" class="cls_004"><span class="cls_004">were made by the neural network is presented after explaining Table</span></div>
+<div style="position:absolute;left:410.64px;top:600.60px" class="cls_004"><span class="cls_004">1.</span></div>
+<div style="position:absolute;left:427.68px;top:600.84px" class="cls_004"><span class="cls_004">In order to test the</span></div>
+<div style="position:absolute;left:100.56px;top:611.16px" class="cls_004"><span class="cls_004">robustness of the discriminant analysis model and the neural network, the training </span><span class="cls_003">sets </span><span class="cls_004">were</span></div>
+<div style="position:absolute;left:100.80px;top:622.44px" class="cls_004"><span class="cls_004">randomly adjusted to be more realistic of the real world ratio of nonbankrupt firms to bankrupt</span></div>
+<div style="position:absolute;left:101.04px;top:633.72px" class="cls_004"><span class="cls_004">firms.  Three separate groups were formed.  The original sample with the 50/50 proportion. The</span></div>
+<div style="position:absolute;left:293.52px;top:701.68px" class="cls_005"><span class="cls_005">II</span></div>
+<div style="position:absolute;left:303.60px;top:700.96px" class="cls_005"><span class="cls_005">- 165</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:2415px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:101.76px;top:75.48px" class="cls_004"><span class="cls_004">second consisted of 36, (80%), nonbankrupt firms and 9, (20%), bankrupt firms.  The third group</span></div>
+<div style="position:absolute;left:101.28px;top:86.76px" class="cls_004"><span class="cls_004">had 36, (90%), nonbankrupt firms and 4, (10%), bankrupt firms.  These will be referred to as the</span></div>
+<div style="position:absolute;left:101.76px;top:98.04px" class="cls_004"><span class="cls_004">80/20 and 90/10 training sets.</span></div>
+<div style="position:absolute;left:122.16px;top:109.32px" class="cls_004"><span class="cls_004">A comparison of the results from the models' predictions for the holdout subsample with the</span></div>
+<div style="position:absolute;left:101.52px;top:119.88px" class="cls_004"><span class="cls_004">50/50 training set shows that the discriminant analysis has a correct prediction rate of 59.26% for</span></div>
+<div style="position:absolute;left:101.28px;top:131.16px" class="cls_004"><span class="cls_004">the bankrupt firms which is well below the correct prediction rate of</span></div>
+<div style="position:absolute;left:415.68px;top:131.16px" class="cls_004"><span class="cls_004">81.48% for the neural</span></div>
+<div style="position:absolute;left:101.52px;top:142.20px" class="cls_004"><span class="cls_004">network.   When the training sample was changed to the</span></div>
+<div style="position:absolute;left:355.68px;top:142.20px" class="cls_004"><span class="cls_004">80/20 proportion of non-bankrupt to</span></div>
+<div style="position:absolute;left:101.76px;top:153.24px" class="cls_004"><span class="cls_004">bankrupt firms, the discriminant analysis had a correct prediction rate of 70.37% for the bankrupt</span></div>
+<div style="position:absolute;left:101.52px;top:164.28px" class="cls_004"><span class="cls_004">firms as compared to the neural network's correct prediction of 77.78%. When the training sample</span></div>
+<div style="position:absolute;left:101.52px;top:175.56px" class="cls_004"><span class="cls_004">was reduced to the</span></div>
+<div style="position:absolute;left:188.88px;top:175.32px" class="cls_004"><span class="cls_004">90/10 proportion, the discriminant analysis had a correct prediction rate of</span></div>
+<div style="position:absolute;left:101.28px;top:186.12px" class="cls_004"><span class="cls_004">59.26% and the neural network had a correct prediction rate of 77.78% for the holdout subsample.</span></div>
+<div style="position:absolute;left:101.04px;top:197.40px" class="cls_004"><span class="cls_004">The neural network appears to be more robust, performing better than the discriminant analysis</span></div>
+<div style="position:absolute;left:101.28px;top:208.44px" class="cls_004"><span class="cls_004">method in each of the three situations.  The neural network also appears to be more consistent</span></div>
+<div style="position:absolute;left:101.04px;top:219.96px" class="cls_004"><span class="cls_004">than the discriminant analysis method.</span></div>
+<div style="position:absolute;left:122.16px;top:230.76px" class="cls_004"><span class="cls_004">The discriminant analysis method correctly predicted 89.29% of the nonbankrupt firms while</span></div>
+<div style="position:absolute;left:101.04px;top:242.28px" class="cls_004"><span class="cls_004">the neural network predicted</span></div>
+<div style="position:absolute;left:228.24px;top:242.04px" class="cls_004"><span class="cls_004">82.14% correctly when trained with the</span></div>
+<div style="position:absolute;left:403.20px;top:242.04px" class="cls_004"><span class="cls_004">50/50 sample.  Using the</span></div>
+<div style="position:absolute;left:101.52px;top:253.32px" class="cls_004"><span class="cls_004">80/20 sample, the discriminant analysis method correctly predicted</span></div>
+<div style="position:absolute;left:393.36px;top:253.32px" class="cls_004"><span class="cls_004">85.71% as compared to the</span></div>
+<div style="position:absolute;left:101.04px;top:264.36px" class="cls_004"><span class="cls_004">neural networks correct prediction rate of 78.57%.  However, when the 90/10 sample was used for</span></div>
+<div style="position:absolute;left:101.04px;top:275.16px" class="cls_004"><span class="cls_004">training, the neural network did better correctly predicting 85.71% of the holdout subsample, while</span></div>
+<div style="position:absolute;left:101.28px;top:286.92px" class="cls_004"><span class="cls_004">the discriminant analysis method predicted only 78.57%.</span></div>
+<div style="position:absolute;left:290.64px;top:320.52px" class="cls_004"><span class="cls_004">Table</span></div>
+<div style="position:absolute;left:318.96px;top:320.52px" class="cls_004"><span class="cls_004">1</span></div>
+<div style="position:absolute;left:138.00px;top:332.04px" class="cls_004"><span class="cls_004">Comparison of Discriminant Analysis and Neural Networks on Holdout Sample</span></div>
+<div style="position:absolute;left:149.28px;top:357.08px" class="cls_007"><span class="cls_007">Training Sample Proportion</span></div>
+<div style="position:absolute;left:272.16px;top:354.36px" class="cls_004"><span class="cls_004">50/50</span></div>
+<div style="position:absolute;left:357.84px;top:354.36px" class="cls_004"><span class="cls_004">80/20</span></div>
+<div style="position:absolute;left:443.04px;top:354.12px" class="cls_004"><span class="cls_004">90/10</span></div>
+<div style="position:absolute;left:221.28px;top:375.08px" class="cls_007"><span class="cls_007">Actual</span></div>
+<div style="position:absolute;left:259.44px;top:376.44px" class="cls_004"><span class="cls_004">BR</span></div>
+<div style="position:absolute;left:302.16px;top:376.44px" class="cls_004"><span class="cls_004">NBR  BR</span></div>
+<div style="position:absolute;left:386.40px;top:376.20px" class="cls_004"><span class="cls_004">NBR  BR</span></div>
+<div style="position:absolute;left:469.92px;top:376.20px" class="cls_004"><span class="cls_004">NBR</span></div>
+<div style="position:absolute;left:162.72px;top:386.60px" class="cls_007"><span class="cls_007">Model</span></div>
+<div style="position:absolute;left:259.92px;top:387.48px" class="cls_004"><span class="cls_004">(27)</span></div>
+<div style="position:absolute;left:305.76px;top:387.48px" class="cls_004"><span class="cls_004">(28)</span></div>
+<div style="position:absolute;left:343.44px;top:387.72px" class="cls_004"><span class="cls_004">(27)</span></div>
+<div style="position:absolute;left:389.52px;top:387.48px" class="cls_004"><span class="cls_004">(28)</span></div>
+<div style="position:absolute;left:426.72px;top:387.24px" class="cls_004"><span class="cls_004">(27)</span></div>
+<div style="position:absolute;left:472.80px;top:387.24px" class="cls_004"><span class="cls_004">(28)</span></div>
+<div style="position:absolute;left:207.84px;top:396.68px" class="cls_007"><span class="cls_007">Predicted</span></div>
+<div style="position:absolute;left:217.92px;top:409.32px" class="cls_004"><span class="cls_004">BR</span></div>
+<div style="position:absolute;left:260.64px;top:409.32px" class="cls_004"><span class="cls_004">22</span></div>
+<div style="position:absolute;left:308.40px;top:409.32px" class="cls_004"><span class="cls_004">5</span></div>
+<div style="position:absolute;left:346.80px;top:409.32px" class="cls_004"><span class="cls_004">21</span></div>
+<div style="position:absolute;left:390.00px;top:409.32px" class="cls_004"><span class="cls_004">6</span></div>
+<div style="position:absolute;left:428.16px;top:409.08px" class="cls_004"><span class="cls_004">21</span></div>
+<div style="position:absolute;left:475.92px;top:409.08px" class="cls_004"><span class="cls_004">6</span></div>
+<div style="position:absolute;left:147.12px;top:421.32px" class="cls_004"><span class="cls_004">Neural</span></div>
+<div style="position:absolute;left:254.16px;top:420.84px" class="cls_004"><span class="cls_004">(81.48)</span></div>
+<div style="position:absolute;left:295.68px;top:420.84px" class="cls_004"><span class="cls_004">(18.51)</span></div>
+<div style="position:absolute;left:337.92px;top:420.60px" class="cls_004"><span class="cls_004">(77.78)</span></div>
+<div style="position:absolute;left:379.92px;top:420.60px" class="cls_004"><span class="cls_004">(22.22)</span></div>
+<div style="position:absolute;left:421.68px;top:420.36px" class="cls_004"><span class="cls_004">(77.78)</span></div>
+<div style="position:absolute;left:463.44px;top:420.36px" class="cls_004"><span class="cls_004">(22.22)</span></div>
+<div style="position:absolute;left:147.12px;top:432.12px" class="cls_004"><span class="cls_004">Network</span></div>
+<div style="position:absolute;left:217.92px;top:443.16px" class="cls_004"><span class="cls_004">NBR</span></div>
+<div style="position:absolute;left:268.08px;top:442.92px" class="cls_004"><span class="cls_004">5</span></div>
+<div style="position:absolute;left:302.16px;top:442.92px" class="cls_004"><span class="cls_004">23</span></div>
+<div style="position:absolute;left:349.92px;top:442.92px" class="cls_004"><span class="cls_004">6</span></div>
+<div style="position:absolute;left:387.84px;top:442.68px" class="cls_004"><span class="cls_004">22</span></div>
+<div style="position:absolute;left:431.28px;top:442.68px" class="cls_004"><span class="cls_004">4</span></div>
+<div style="position:absolute;left:469.44px;top:442.44px" class="cls_004"><span class="cls_004">24</span></div>
+<div style="position:absolute;left:255.84px;top:454.20px" class="cls_004"><span class="cls_004">(17.86)</span></div>
+<div style="position:absolute;left:297.36px;top:454.20px" class="cls_004"><span class="cls_004">(82.14)</span></div>
+<div style="position:absolute;left:339.60px;top:454.20px" class="cls_004"><span class="cls_004">(21.43)</span></div>
+<div style="position:absolute;left:381.60px;top:454.20px" class="cls_004"><span class="cls_004">(78.57)</span></div>
+<div style="position:absolute;left:423.36px;top:453.96px" class="cls_004"><span class="cls_004">(14.29)</span></div>
+<div style="position:absolute;left:465.12px;top:453.72px" class="cls_004"><span class="cls_004">(85.71)</span></div>
+<div style="position:absolute;left:217.92px;top:476.76px" class="cls_004"><span class="cls_004">BR</span></div>
+<div style="position:absolute;left:261.60px;top:476.76px" class="cls_004"><span class="cls_004">16</span></div>
+<div style="position:absolute;left:305.04px;top:476.76px" class="cls_004"><span class="cls_004">11</span></div>
+<div style="position:absolute;left:348.48px;top:476.76px" class="cls_004"><span class="cls_004">19</span></div>
+<div style="position:absolute;left:391.44px;top:476.52px" class="cls_004"><span class="cls_004">8</span></div>
+<div style="position:absolute;left:430.08px;top:476.52px" class="cls_004"><span class="cls_004">16</span></div>
+<div style="position:absolute;left:473.04px;top:476.28px" class="cls_004"><span class="cls_004">11</span></div>
+<div style="position:absolute;left:147.36px;top:488.28px" class="cls_004"><span class="cls_004">Discrim</span></div>
+<div style="position:absolute;left:254.88px;top:488.04px" class="cls_004"><span class="cls_004">(59.26)</span></div>
+<div style="position:absolute;left:297.12px;top:488.04px" class="cls_004"><span class="cls_004">(40.74)</span></div>
+<div style="position:absolute;left:338.88px;top:487.80px" class="cls_004"><span class="cls_004">(70.37)</span></div>
+<div style="position:absolute;left:380.64px;top:487.80px" class="cls_004"><span class="cls_004">(29.63)</span></div>
+<div style="position:absolute;left:422.64px;top:487.56px" class="cls_004"><span class="cls_004">(59.26)</span></div>
+<div style="position:absolute;left:464.40px;top:487.56px" class="cls_004"><span class="cls_004">(40.74)</span></div>
+<div style="position:absolute;left:147.36px;top:499.32px" class="cls_004"><span class="cls_004">Analysis</span></div>
+<div style="position:absolute;left:217.92px;top:510.60px" class="cls_004"><span class="cls_004">NBR</span></div>
+<div style="position:absolute;left:268.32px;top:510.60px" class="cls_004"><span class="cls_004">3</span></div>
+<div style="position:absolute;left:306.72px;top:510.36px" class="cls_004"><span class="cls_004">25</span></div>
+<div style="position:absolute;left:349.68px;top:510.36px" class="cls_004"><span class="cls_004">4</span></div>
+<div style="position:absolute;left:388.08px;top:510.36px" class="cls_004"><span class="cls_004">24</span></div>
+<div style="position:absolute;left:435.84px;top:510.12px" class="cls_004"><span class="cls_004">6</span></div>
+<div style="position:absolute;left:469.68px;top:510.12px" class="cls_004"><span class="cls_004">22</span></div>
+<div style="position:absolute;left:256.08px;top:521.64px" class="cls_004"><span class="cls_004">(10.71)</span></div>
+<div style="position:absolute;left:297.60px;top:521.64px" class="cls_004"><span class="cls_004">(89.29)</span></div>
+<div style="position:absolute;left:339.84px;top:521.64px" class="cls_004"><span class="cls_004">(14.29)</span></div>
+<div style="position:absolute;left:381.60px;top:521.64px" class="cls_004"><span class="cls_004">(85.71)</span></div>
+<div style="position:absolute;left:423.60px;top:521.40px" class="cls_004"><span class="cls_004">(21.43)</span></div>
+<div style="position:absolute;left:465.12px;top:521.40px" class="cls_004"><span class="cls_004">(78.57)</span></div>
+<div style="position:absolute;left:147.36px;top:543.96px" class="cls_004"><span class="cls_004">BR = Bankrupt, NB = Nonbankrupt, % in parentheses</span></div>
+<div style="position:absolute;left:122.88px;top:588.36px" class="cls_004"><span class="cls_004">Further analysis of the incorrect predictions of the neural network revealed that the five</span></div>
+<div style="position:absolute;left:102.00px;top:599.40px" class="cls_004"><span class="cls_004">bankrupt firms that were incorrectly classified as nonbankrupt were also misclassified by the</span></div>
+<div style="position:absolute;left:102.00px;top:610.68px" class="cls_004"><span class="cls_004">discriminant analysis model.  Of the five nonbankrupt firms that were incorrectly classified by the</span></div>
+<div style="position:absolute;left:102.00px;top:621.72px" class="cls_004"><span class="cls_004">neural network, as bankrupt, three were also misclassified by the discriminant analysis model and</span></div>
+<div style="position:absolute;left:102.24px;top:633.24px" class="cls_004"><span class="cls_004">one more was nearly misclassified by this model because it received only a 51.31% probability</span></div>
+<div style="position:absolute;left:294.48px;top:696.44px" class="cls_007"><span class="cls_007">II</span></div>
+<div style="position:absolute;left:304.56px;top:695.96px" class="cls_007"><span class="cls_007">- 166</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-309px;top:3217px;width:618px;height:796px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:173.52px;top:0.00px" class="cls_008"><span class="cls_008">•</span></div>
+<div style="position:absolute;left:100.32px;top:81.72px" class="cls_004"><span class="cls_004">of membership in the nonbankrupt group.  These results show that the firms misclassified by the</span></div>
+<div style="position:absolute;left:100.08px;top:93.00px" class="cls_004"><span class="cls_004">neural network were also a problem for the discriminant analysis method.</span></div>
+<div style="position:absolute;left:120.96px;top:104.04px" class="cls_004"><span class="cls_004">It is more costly to classify a failed firm as nonfailed than to classify a nonfailed firm as</span></div>
+<div style="position:absolute;left:100.32px;top:115.56px" class="cls_004"><span class="cls_004">failed</span></div>
+<div style="position:absolute;left:127.68px;top:115.32px" class="cls_004"><span class="cls_004">[Watts and Zimmerman, 1986].  The accountant will be more interested in getting an early</span></div>
+<div style="position:absolute;left:100.08px;top:126.36px" class="cls_004"><span class="cls_004">indication of a firm heading towards bankruptcy.  Figure 2 exhibits the performance of the two</span></div>
+<div style="position:absolute;left:100.08px;top:137.16px" class="cls_004"><span class="cls_004">models in predicting bankruptcy of a firm as the training set proportions are varied.  It clearly</span></div>
+<div style="position:absolute;left:100.08px;top:147.96px" class="cls_004"><span class="cls_004">states that regardless of the training sample proportions, the neural network model predicted the</span></div>
+<div style="position:absolute;left:100.08px;top:159.72px" class="cls_004"><span class="cls_004">l</span></div>
+<div style="position:absolute;left:100.08px;top:159.72px" class="cls_004"><span class="cls_004">i</span></div>
+<div style="position:absolute;left:105.60px;top:159.24px" class="cls_004"><span class="cls_004">kelihood of a firm getting into bankruptcy better.</span></div>
+<div style="position:absolute;left:217.44px;top:199.96px" class="cls_009"><span class="cls_009">ure</span></div>
+<div style="position:absolute;left:235.20px;top:199.96px" class="cls_009"><span class="cls_009">P</span></div>
+<div style="position:absolute;left:246.96px;top:199.96px" class="cls_009"><span class="cls_009">lotion o</span></div>
+<div style="position:absolute;left:282.72px;top:199.96px" class="cls_009"><span class="cls_009">up lrms vs. D stnbulon o   rain rip  e</span></div>
+<div style="position:absolute;left:174.24px;top:210.00px" class="cls_008"><span class="cls_008">P</span></div>
+<div style="position:absolute;left:174.48px;top:223.68px" class="cls_008"><span class="cls_008">er</span></div>
+<div style="position:absolute;left:191.04px;top:220.08px" class="cls_008"><span class="cls_008">90</span></div>
+<div style="position:absolute;left:191.28px;top:240.72px" class="cls_008"><span class="cls_008">BO</span></div>
+<div style="position:absolute;left:190.80px;top:261.60px" class="cls_008"><span class="cls_008">70</span></div>
+<div style="position:absolute;left:173.76px;top:265.68px" class="cls_008"><span class="cls_008">C B</span></div>
+<div style="position:absolute;left:174.00px;top:272.40px" class="cls_008"><span class="cls_008">o a</span></div>
+<div style="position:absolute;left:174.00px;top:287.32px" class="cls_009"><span class="cls_009">er</span></div>
+<div style="position:absolute;left:190.80px;top:282.72px" class="cls_008"><span class="cls_008">60</span></div>
+<div style="position:absolute;left:181.44px;top:303.84px" class="cls_010"><span class="cls_010">r</span><span class="cls_008">U</span></div>
+<div style="position:absolute;left:190.56px;top:303.84px" class="cls_008"><span class="cls_008">50</span></div>
+<div style="position:absolute;left:396.24px;top:309.64px" class="cls_009"><span class="cls_009">D Olsen. Ana</span></div>
+<div style="position:absolute;left:174.72px;top:314.40px" class="cls_008"><span class="cls_008">I P</span></div>
+<div style="position:absolute;left:190.56px;top:324.72px" class="cls_008"><span class="cls_008">40</span></div>
+<div style="position:absolute;left:396.24px;top:323.08px" class="cls_009"><span class="cls_009">D Neural Net</span></div>
+<div style="position:absolute;left:174.00px;top:347.08px" class="cls_009"><span class="cls_009">e  r</span></div>
+<div style="position:absolute;left:190.56px;top:346.08px" class="cls_008"><span class="cls_008">30</span></div>
+<div style="position:absolute;left:174.00px;top:356.64px" class="cls_008"><span class="cls_008">n</span></div>
+<div style="position:absolute;left:180.00px;top:348.04px" class="cls_011"><span class="cls_011">m</span></div>
+<div style="position:absolute;left:174.48px;top:363.60px" class="cls_008"><span class="cls_008">is</span></div>
+<div style="position:absolute;left:190.56px;top:366.96px" class="cls_008"><span class="cls_008">20</span></div>
+<div style="position:absolute;left:190.56px;top:388.08px" class="cls_008"><span class="cls_008">10</span></div>
+<div style="position:absolute;left:173.52px;top:413.08px" class="cls_009"><span class="cls_009">a</span></div>
+<div style="position:absolute;left:228.00px;top:420.24px" class="cls_008"><span class="cls_008">50/50</span></div>
+<div style="position:absolute;left:288.48px;top:420.48px" class="cls_008"><span class="cls_008">80/20</span></div>
+<div style="position:absolute;left:349.20px;top:420.72px" class="cls_008"><span class="cls_008">90/10</span></div>
+<div style="position:absolute;left:233.28px;top:429.84px" class="cls_008"><span class="cls_008">Non•bankrupt and Bankrupt Firms in Training Set</span></div>
+<div style="position:absolute;left:258.72px;top:461.16px" class="cls_004"><span class="cls_004">V.  CONCLUSIONS</span></div>
+<div style="position:absolute;left:120.48px;top:483.24px" class="cls_004"><span class="cls_004">The results obtained from this project show promise in using neural networks for prediction</span></div>
+<div style="position:absolute;left:99.60px;top:494.76px" class="cls_004"><span class="cls_004">purposes.  This research compared neural networks against a method that has become the "rule"</span></div>
+<div style="position:absolute;left:99.60px;top:505.80px" class="cls_004"><span class="cls_004">in bankruptcy prediction, and the neural network performed better on both the original set of data</span></div>
+<div style="position:absolute;left:99.84px;top:517.56px" class="cls_004"><span class="cls_004">and on predicting the bankrupt firms in the holdout sample.  The neural network proved to be</span></div>
+<div style="position:absolute;left:99.60px;top:529.08px" class="cls_004"><span class="cls_004">more robust than the discriminant analysis method on reduced sample sizes.</span></div>
+<div style="position:absolute;left:120.48px;top:539.88px" class="cls_004"><span class="cls_004">Further research should be done in this area using different ratios to see if the prediction</span></div>
+<div style="position:absolute;left:99.84px;top:550.92px" class="cls_004"><span class="cls_004">accuracy can be increased.  The ratios in this study were based on a study completed in</span></div>
+<div style="position:absolute;left:488.88px;top:551.16px" class="cls_004"><span class="cls_004">1968,</span></div>
+<div style="position:absolute;left:99.60px;top:562.68px" class="cls_004"><span class="cls_004">different ratios may perform better today [Altman, et. al., 1977].  Another area for future research</span></div>
+<div style="position:absolute;left:99.84px;top:573.24px" class="cls_004"><span class="cls_004">may be in applying different neural network architectures to this problem.  Comparison of these</span></div>
+<div style="position:absolute;left:99.60px;top:584.52px" class="cls_004"><span class="cls_004">other architectures may help to identify the best architecture for this type of problem.</span></div>
+<div style="position:absolute;left:260.40px;top:607.08px" class="cls_004"><span class="cls_004">VI.  REFERENCES</span></div>
+<div style="position:absolute;left:99.84px;top:629.40px" class="cls_004"><span class="cls_004">Altman,  E.  I.,  "Financial  Ratios,  Discriminant  Analysis  and  the  Prediction  of Corporate</span></div>
+<div style="position:absolute;left:118.56px;top:640.68px" class="cls_004"><span class="cls_004">Bankruptcy," The Journal of Finance (September 1968), pp. 589-609.</span></div>
+<div style="position:absolute;left:288.48px;top:703.36px" class="cls_005"><span class="cls_005">II</span></div>
+<div style="position:absolute;left:298.80px;top:703.12px" class="cls_005"><span class="cls_005">- 167</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:4023px;width:613px;height:793px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:132.00px;top:88.20px" class="cls_004"><span class="cls_004">, Haldeman, R. G. and Narayanan, P., "Zeta Analysis," Journal of Banking and Finance</span></div>
+<div style="position:absolute;left:120.72px;top:99.48px" class="cls_004"><span class="cls_004">(June</span></div>
+<div style="position:absolute;left:147.36px;top:99.24px" class="cls_004"><span class="cls_004">1977), pp.</span></div>
+<div style="position:absolute;left:193.44px;top:99.24px" class="cls_004"><span class="cls_004">29-51.</span></div>
+<div style="position:absolute;left:132.00px;top:121.80px" class="cls_004"><span class="cls_004">, "Accounting Implications of Failure Prediction Models," Journal of Accounting Auditing</span></div>
+<div style="position:absolute;left:120.48px;top:133.08px" class="cls_004"><span class="cls_004">& Finance (Fall 1982), pp. 4-19.</span></div>
+<div style="position:absolute;left:132.00px;top:155.64px" class="cls_004"><span class="cls_004">, and Spivack, J., "Predicting Bankruptcy: The Value Line Relative Financial Strength</span></div>
+<div style="position:absolute;left:120.48px;top:166.44px" class="cls_004"><span class="cls_004">System  vs.  the  Zeta  Bankruptcy  Classification  Approach,"  Financial  Analysts  Journal</span></div>
+<div style="position:absolute;left:120.48px;top:177.48px" class="cls_004"><span class="cls_004">(November-December 1983), pp.</span></div>
+<div style="position:absolute;left:262.80px;top:177.48px" class="cls_004"><span class="cls_004">60-67.</span></div>
+<div style="position:absolute;left:101.52px;top:199.80px" class="cls_004"><span class="cls_004">American Accounting Association, A STATEMENT OF BASIC ACCOUNTING THEORY (AAA,</span></div>
+<div style="position:absolute;left:120.96px;top:211.08px" class="cls_004"><span class="cls_004">1966).</span></div>
+<div style="position:absolute;left:101.04px;top:233.16px" class="cls_004"><span class="cls_004">Beaver, W. H., "Financial Ratios as Predictors of Failure," Empirical Research in Accounting:</span></div>
+<div style="position:absolute;left:120.24px;top:245.16px" class="cls_004"><span class="cls_004">Selected Studies,</span></div>
+<div style="position:absolute;left:195.84px;top:244.92px" class="cls_004"><span class="cls_004">1966, pp.</span></div>
+<div style="position:absolute;left:238.80px;top:244.92px" class="cls_004"><span class="cls_004">71-111.</span></div>
+<div style="position:absolute;left:101.04px;top:267.48px" class="cls_004"><span class="cls_004">Belkaoui, A., ACCOUNTING THEORY (Harcourt Brace Jovanovich, Inc., 1981).</span></div>
+<div style="position:absolute;left:100.80px;top:289.80px" class="cls_004"><span class="cls_004">Blum, M., "Failing Company Discriminant Analysis," Journal of Accounting Research</span></div>
+<div style="position:absolute;left:482.40px;top:289.80px" class="cls_004"><span class="cls_004">(Spring</span></div>
+<div style="position:absolute;left:103.68px;top:300.84px" class="cls_004"><span class="cls_004">'</span></div>
+<div style="position:absolute;left:120.96px;top:300.84px" class="cls_004"><span class="cls_004">1974), pp.</span></div>
+<div style="position:absolute;left:168.00px;top:300.84px" class="cls_004"><span class="cls_004">1-25.</span></div>
+<div style="position:absolute;left:101.28px;top:322.44px" class="cls_004"><span class="cls_004">Caudill, M., "Neural Networks Primer, Part III," AI Expert (June</span></div>
+<div style="position:absolute;left:383.28px;top:322.68px" class="cls_004"><span class="cls_004">1988), pp.</span></div>
+<div style="position:absolute;left:429.60px;top:322.68px" class="cls_004"><span class="cls_004">53-59.</span></div>
+<div style="position:absolute;left:101.04px;top:344.76px" class="cls_004"><span class="cls_004">Collins, E., Ghosh, S., and Scofield, C., "An Application of a Multiple Neural Network Learning</span></div>
+<div style="position:absolute;left:120.24px;top:356.04px" class="cls_004"><span class="cls_004">System to Emulation of Mortgage Underwriting Judgements," Working Paper (Nestor, Inc., 1</span></div>
+<div style="position:absolute;left:120.24px;top:367.32px" class="cls_004"><span class="cls_004">Richmond Square, Providence, RI,</span></div>
+<div style="position:absolute;left:270.72px;top:367.32px" class="cls_004"><span class="cls_004">1989).</span></div>
+<div style="position:absolute;left:101.28px;top:389.64px" class="cls_004"><span class="cls_004">Deakin, E. B., "A Discriminant Analysis of Predictors of Business Failure," Journal of Accounting</span></div>
+<div style="position:absolute;left:120.24px;top:400.68px" class="cls_004"><span class="cls_004">Research (Spring</span></div>
+<div style="position:absolute;left:196.56px;top:400.68px" class="cls_004"><span class="cls_004">1972), pp.</span></div>
+<div style="position:absolute;left:243.84px;top:400.68px" class="cls_004"><span class="cls_004">167-179.</span></div>
+<div style="position:absolute;left:101.28px;top:423.00px" class="cls_004"><span class="cls_004">Dutta, S. and Shekhar, S., "Bond Rating: A Non-Conservative Application of Neural Networks,"</span></div>
+<div style="position:absolute;left:120.00px;top:433.80px" class="cls_004"><span class="cls_004">Working Paper (Computer Science Division, University of California,</span></div>
+<div style="position:absolute;left:420.24px;top:434.04px" class="cls_004"><span class="cls_004">1989).</span></div>
+<div style="position:absolute;left:101.04px;top:455.88px" class="cls_004"><span class="cls_004">Karels, G. V. and Prakash, A., "Multivariate Normality and  Forecasting of Business Bankruptcy,"</span></div>
+<div style="position:absolute;left:119.76px;top:467.40px" class="cls_004"><span class="cls_004">Journal of Business Finance & Accounting (Winter</span></div>
+<div style="position:absolute;left:342.96px;top:467.40px" class="cls_004"><span class="cls_004">1987), pp.</span></div>
+<div style="position:absolute;left:388.80px;top:467.40px" class="cls_004"><span class="cls_004">573-93.</span></div>
+<div style="position:absolute;left:101.04px;top:489.24px" class="cls_004"><span class="cls_004">Lippmann, R. P., "An Introduction to Computing with Neural Nets," IEEE ASSP Magazine (April</span></div>
+<div style="position:absolute;left:120.72px;top:500.28px" class="cls_004"><span class="cls_004">1987), pp.</span></div>
+<div style="position:absolute;left:167.04px;top:500.28px" class="cls_004"><span class="cls_004">4-22.</span></div>
+<div style="position:absolute;left:101.04px;top:522.84px" class="cls_004"><span class="cls_004">Moyer, R. C., "Forecasting Financial Failure: A Reexamination," Financial Management (Spring</span></div>
+<div style="position:absolute;left:120.72px;top:533.88px" class="cls_004"><span class="cls_004">1977), pp.</span></div>
+<div style="position:absolute;left:168.00px;top:533.88px" class="cls_004"><span class="cls_004">11-17.</span></div>
+<div style="position:absolute;left:101.28px;top:555.96px" class="cls_004"><span class="cls_004">Rumelhart, D. E., Hinton, G. E., and Williams, R. J., "Learning Internal Representation by Error</span></div>
+<div style="position:absolute;left:120.24px;top:567.24px" class="cls_004"><span class="cls_004">Propagation," Parallel Distributed Processing, Vol.</span></div>
+<div style="position:absolute;left:337.92px;top:567.72px" class="cls_004"><span class="cls_004">1 (Cambridge, MA: MIT Press</span></div>
+<div style="position:absolute;left:473.04px;top:567.96px" class="cls_004"><span class="cls_004">1986).</span></div>
+<div style="position:absolute;left:101.76px;top:589.80px" class="cls_004"><span class="cls_004">Siegel, J. G., "Warning Signs of Impending Business Failure and Means to Counteract such</span></div>
+<div style="position:absolute;left:120.48px;top:601.32px" class="cls_004"><span class="cls_004">Prospective Failure," The National Public Accountant (April</span></div>
+<div style="position:absolute;left:380.64px;top:601.80px" class="cls_004"><span class="cls_004">1981), pp.</span></div>
+<div style="position:absolute;left:426.96px;top:602.04px" class="cls_004"><span class="cls_004">9-13.</span></div>
+<div style="position:absolute;left:101.76px;top:623.64px" class="cls_004"><span class="cls_004">Watts, R. L. and Zimmerman, J. L., POSITIVE ACCOUNTING THEORY (Prentice-Hall, Inc.,</span></div>
+<div style="position:absolute;left:121.92px;top:635.16px" class="cls_004"><span class="cls_004">1986).</span></div>
+<div style="position:absolute;left:291.12px;top:698.80px" class="cls_005"><span class="cls_005">II</span></div>
+<div style="position:absolute;left:301.44px;top:698.56px" class="cls_005"><span class="cls_005">- 168</span></div>
+</div>
+
+</body>
+</html>
